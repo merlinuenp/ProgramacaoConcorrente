@@ -1,3 +1,3 @@
 # ProgramacaoConcorrente
 
-# Códigos fonte utilizados nas aulas. 
+Códigos fonte utilizados nas aulas. 
