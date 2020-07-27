@@ -14,8 +14,10 @@ public class Fila {
     
     public synchronized void depositar(int item){
         try{
-            while (tamanhoAtual == tamanhoMax )
+            while (tamanhoAtual == tamanhoMax ){
+                System.out.println("Buffer cheio!");
                 wait();
+            }
             fim = (fim + 1) % tamanhoMax; 
             fila[fim] = item;
             tamanhoAtual++; 
@@ -31,7 +33,7 @@ public class Fila {
     
     public synchronized int retirar() throws InterruptedException{
         int item = 0;
-        while (tamanhoAtual == 0){
+        while (tamanhoAtual == 0){            
             wait();
         }
         item = fila[frente];

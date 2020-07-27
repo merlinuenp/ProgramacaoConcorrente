@@ -8,6 +8,7 @@ public class Consumidor extends Thread {
         buffer = fila; 
     }
     
+    @Override
     public void run(){
         int item;
         while (true){
