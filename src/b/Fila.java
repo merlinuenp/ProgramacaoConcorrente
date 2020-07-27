@@ -2,13 +2,13 @@ package b;
 
 public class Fila {
     Integer fila[];
-    int frente, rabo, tamanhoMax, tamanhoAtual; 
+    int frente, fim, tamanhoMax, tamanhoAtual; 
     
     public Fila(int tamanhoMax){
         fila = new Integer[tamanhoMax];
         this.tamanhoMax = tamanhoMax;
         frente = -1;
-        rabo = -1; 
+        fim = -1; 
         this.tamanhoAtual = 0; 
     }
     
@@ -16,11 +16,11 @@ public class Fila {
         try{
             while (tamanhoAtual == tamanhoMax )
                 wait();
-            rabo = (rabo + 1) % tamanhoMax; 
-            fila[rabo] = item;
+            fim = (fim + 1) % tamanhoMax; 
+            fila[fim] = item;
             tamanhoAtual++; 
             if (frente == -1) {
-                frente = rabo; 
+                frente = fim; 
             }
 //            Thread.sleep(1000); // só para visualizar
             notifyAll();          
