@@ -1,4 +1,4 @@
-package a;
+package basico;
 
 
 public class TarefaParalela extends Thread {

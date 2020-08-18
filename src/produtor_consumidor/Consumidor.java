@@ -1,4 +1,4 @@
-package b;
+package produtor_consumidor;
 
 
 public class Consumidor extends Thread {

@@ -1,4 +1,4 @@
-package b;
+package produtor_consumidor;
 
 public class Fila {
     Integer fila[];
@@ -33,7 +33,8 @@ public class Fila {
     
     public synchronized int retirar() throws InterruptedException{
         int item = 0;
-        while (tamanhoAtual == 0){            
+        while (tamanhoAtual == 0){ 
+            System.out.println("Buffer vazio");
             wait();
         }
         item = fila[frente];
