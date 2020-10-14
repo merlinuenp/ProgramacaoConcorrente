@@ -15,6 +15,7 @@ public class RoboParalelo extends RecursiveTask<Long> {
 
     @Override
     protected Long compute() {
+        System.out.println(Thread.currentThread().getName());
         if (dividido == true){
             return this.contarCaminhos(x, y);
         }        
